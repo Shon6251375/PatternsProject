@@ -19,7 +19,7 @@ public class MeteorService {
     UserMeteorDAOImplementation umdi;
 
     public MeteorService() {
-        this.umdi = new UserMeteorDAOImplementation("jdbc:sqlite:C:/Users/shonc/Downloads/MeteorDatabase.db");
+        this.umdi = new UserMeteorDAOImplementation("jdbc:sqlite:C:/Users/shonc/Downloads/PatternsProject/MeteorDatabase.db");
     }
     
     public void viewTable(JTable jTable1)
