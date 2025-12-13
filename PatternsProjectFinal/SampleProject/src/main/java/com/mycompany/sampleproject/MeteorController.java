@@ -13,10 +13,22 @@ import javax.swing.JTextField;
  * @author shonc
  */
 public class MeteorController {
-    MeteorService ms;
+    private static MeteorController mcInstance;
+    private MeteorService ms;
 
-    public MeteorController() {
+    private MeteorController() {
         this.ms = new MeteorService();
+    }
+    
+    public static synchronized MeteorController getInstance()
+    {
+        if(mcInstance == null)
+        {
+            mcInstance=new MeteorController();
+        
+        }
+        return mcInstance;
+    
     }
     
     public void calladdmeteor(JTextField meteor_name,JTextField meteor_Impact_Date,JTextField meteor_Impact_time,JTextField meteor_Impact_Location,JTextField meteor_Impact_type,JTextField meteor_Impact_mass,JTextField meteor_Impact_diamater,JTextField meteor_Impact_airburst)

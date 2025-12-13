@@ -30,11 +30,8 @@ public class Meteor {
         this.meteor_Diameter = meteor_Diameter;
         this.airbust = airbust;
     }
-
-    
-    
-
-    public Meteor(String meteor_Name, String meteor_Impact_date, String meteor_Impact_Time, String meteor_Impact_Location, String meteor_Type, double meteor_Mass, double meteor_Diameter, String airbust) {
+     
+      public Meteor(String meteor_Name, String meteor_Impact_date, String meteor_Impact_Time, String meteor_Impact_Location, String meteor_Type, double meteor_Mass, double meteor_Diameter, String airbust) {
         this.meteor_Name = meteor_Name;
         this.meteor_Impact_date = meteor_Impact_date;
         this.meteor_Impact_Time = meteor_Impact_Time;
@@ -45,6 +42,11 @@ public class Meteor {
         this.airbust = airbust;
     }
 
+
+    
+    
+
+   
     public int getMeteor_id() {
         return this.meteor_id;
     }
