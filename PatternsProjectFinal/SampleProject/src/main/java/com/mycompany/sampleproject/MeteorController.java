@@ -56,6 +56,12 @@ public class MeteorController {
     
     }
     
+    public Meteor getonemeteorcalled(JTextField id)
+    {
+        return ms.getoneMeteor(id);
+    
+    }
+    
     
     
 }

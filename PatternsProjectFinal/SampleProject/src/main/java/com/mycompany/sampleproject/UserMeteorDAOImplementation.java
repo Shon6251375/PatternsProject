@@ -53,8 +53,9 @@ public class UserMeteorDAOImplementation implements MeteorDAO{
         }
         catch(SQLException e){
             System.out.println(e.getMessage());
-            return meteorlist;
+            
         }
+        return meteorlist;
     }
     @Override
     public void addMeteor(Meteor m) {
@@ -121,6 +122,45 @@ public class UserMeteorDAOImplementation implements MeteorDAO{
             System.out.println(e.getMessage());
         
         }
+        
+    }
+
+    @Override
+    public Meteor getMeteor(int id) {
+        String sql="SELECT * FROM Meteor WHERE Meteor_ID = ?";
+        Meteor m=null;
+        try(Connection conn=DriverManager.getConnection(db_URL);
+            PreparedStatement pstmt=conn.prepareStatement(sql);
+            ){
+            pstmt.setInt(1,id);
+            ResultSet rs=pstmt.executeQuery();
+            
+            if(rs.next())
+            {
+                 m=new Meteor(
+                        rs.getInt("Meteor_ID"),
+                        rs.getString("Meteor_Name"), 
+                        rs.getString("Meteor_Impact_Date"), 
+                        rs.getString("Meteor_Impact_Time"), 
+                        rs.getString("Meteor_Impact_Location"),
+                        rs.getString("Meteor_Type"), 
+                        rs.getDouble("Meteor_Mass"), 
+                        rs.getDouble("Meteor_Diameter_M"),
+                        rs.getString("Airburst")
+                        );
+                 return m;
+            
+            
+            }
+            
+
+        }
+        catch(SQLException e){
+            System.out.println(e.getMessage());
+        
+        }
+        return m;
+        
         
     }
 

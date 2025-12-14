@@ -169,6 +169,15 @@ public class AddMeteor extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
        DatabaseController.mc.calladdmeteor(jTextField1, jTextField2, jTextField3, jTextField4, jTextField5, jTextField6, jTextField7, jTextField8);
+       jTextField1.setText("");
+       jTextField2.setText("");
+       jTextField3.setText("");
+       jTextField4.setText("");
+       jTextField5.setText("");
+       jTextField6.setText("");
+       jTextField7.setText("");
+       jTextField8.setText("");
+       
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

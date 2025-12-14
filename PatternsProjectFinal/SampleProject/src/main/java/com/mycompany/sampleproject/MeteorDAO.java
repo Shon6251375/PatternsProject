@@ -17,6 +17,7 @@ public interface MeteorDAO {
     abstract void removeMeteor(int id);
     abstract void updateMeteor(int id,String text,boolean numorno,String sqlstat);
     abstract List<Meteor> getAll();
+    abstract Meteor getMeteor(int id);
     
     
     

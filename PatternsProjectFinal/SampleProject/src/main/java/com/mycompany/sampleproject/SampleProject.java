@@ -11,6 +11,8 @@ package com.mycompany.sampleproject;
 public class SampleProject {
 
     public static void main(String[] args) {
+//        AnimationView av=new AnimationView();
+//        av.setVisible(true);
         DatabaseController dbc=new DatabaseController();
         dbc.setVisible(true);
     }

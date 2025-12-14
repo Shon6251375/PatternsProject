@@ -134,6 +134,12 @@ public class MeteorService {
             umdi.updateMeteor(Integer.parseInt(id.getText()), change.getText(), isnumber, sql);
     }
     
+    public Meteor getoneMeteor(JTextField id)
+    {
+        return umdi.getMeteor(Integer.parseInt(id.getText()));
+    
+    }
+    
     
     
     
