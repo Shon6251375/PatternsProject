@@ -23,6 +23,7 @@ Intructions:
 
 Netbeans version 22
 Sqlite3
+Change path for database in service class at the top from shonc to whatever your user is.
 
 Design Patterns:
 DAO(Data Access Object):Seperating Main code from Database operations
