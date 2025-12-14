@@ -17,7 +17,6 @@ import java.util.ResourceBundle;
  */
 public class DatabaseController extends javax.swing.JFrame {
     public static Locale App_Locale;
-    public static String DB_URL = "jdbc:sqlite:C:/Users/shonc/Downloads/MeteorDatabase.db";
     public static MeteorController mc=MeteorController.getInstance();
    
     
