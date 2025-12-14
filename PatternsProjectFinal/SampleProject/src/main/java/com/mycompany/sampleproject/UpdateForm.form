@@ -116,7 +116,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Meteor Name"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR NAME" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton2">
@@ -124,7 +126,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Impact Date"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="IMPACT DATE" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton3">
@@ -132,7 +136,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Impact Time"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="IMPACT TIME" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton4">
@@ -140,7 +146,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Impact Location"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="IMPACT LOCATION" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton5">
@@ -148,7 +156,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Meteor Type"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR TYPE" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton6">
@@ -156,7 +166,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Meteor Mass"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR MASS" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton7">
@@ -164,7 +176,9 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Meteor Diameter"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR DIAMETER" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
         <Property name="toolTipText" type="java.lang.String" value=""/>
       </Properties>
     </Component>
@@ -173,14 +187,18 @@
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Airburst"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="AIRBURST" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField2">
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Update"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="UPDATE" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>

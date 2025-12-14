@@ -23,7 +23,6 @@ public class CustomMeteorPanel extends JPanel{
     private List<Point> trail=new ArrayList<>();
     
     
-    
     public CustomMeteorPanel(double mass,double velocity, String imagePath)
     {
         this.y=0;
@@ -75,17 +74,7 @@ public class CustomMeteorPanel extends JPanel{
 
     }
     
-//    private int currentsize(double mass)
-//    {
-//        double minmass=100;
-//        double maxmass =5000;
-//        double normalized = (mass-minmass)/(maxmass-minmass);
-//        normalized=Math.max(0, Math.min(1, normalized));
-//        return (int) (20 + normalized *(80 - 20));
-//        
-//    
-//    }
-    
+
     
     
 }

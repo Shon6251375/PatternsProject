@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ResourceBundle;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,6 +24,30 @@ public class AddMeteor extends javax.swing.JFrame {
      */
     public AddMeteor() {
         initComponents();
+        updateText();
+        pack();
+    }
+    private void updateText()
+    {
+        
+    java.util.ResourceBundle bundle = ResourceBundle.getBundle(
+            "com.mycompany.sampleproject.Bundle",
+            SampleProject.APP_LOCALE
+        );
+
+    jLabel1.setText(bundle.getString("METEOR FORM"));
+    jLabel2.setText(bundle.getString("METEOR NAME"));
+    jLabel3.setText(bundle.getString("METEOR IMPACT DATE"));
+    jLabel4.setText(bundle.getString("METEOR IMPACT TIME"));
+    jLabel5.setText(bundle.getString("METEOR IMPACT LOCATION"));
+    jLabel6.setText(bundle.getString("METEOR TYPE"));
+    jLabel7.setText(bundle.getString("METEOR MASS"));
+    jLabel8.setText(bundle.getString("METEOR DIAMETER"));
+    jLabel9.setText(bundle.getString("AIRBURST"));
+
+    jButton1.setText(bundle.getString("SUBMIT"));
+
+    
     }
 
     /**
@@ -54,30 +79,31 @@ public class AddMeteor extends javax.swing.JFrame {
         jTextField8 = new javax.swing.JTextField();
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
-        jLabel1.setText("Meteor Form");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com.mycompany.sampleproject.Bundle"); // NOI18N
+        jLabel1.setText(bundle.getString("METEOR FORM")); // NOI18N
 
-        jButton1.setText("Submit");
+        jButton1.setText(bundle.getString("SUBMIT")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel2.setText("Meteor Name");
+        jLabel2.setText(bundle.getString("METEOR NAME")); // NOI18N
 
-        jLabel3.setText("Meteor Impact Date");
+        jLabel3.setText(bundle.getString("METEOR IMPACT DATE")); // NOI18N
 
-        jLabel4.setText("Meteor Impact Time");
+        jLabel4.setText(bundle.getString("METEOR IMPACT TIME")); // NOI18N
 
-        jLabel5.setText("Meteor Impact Location");
+        jLabel5.setText(bundle.getString("METEOR IMPACT LOCATION")); // NOI18N
 
-        jLabel6.setText("Meteor Type");
+        jLabel6.setText(bundle.getString("METEOR TYPE")); // NOI18N
 
-        jLabel7.setText("Meteor Mass");
+        jLabel7.setText(bundle.getString("METEOR MASS")); // NOI18N
 
-        jLabel8.setText("Meteor Diameter");
+        jLabel8.setText(bundle.getString("METEOR DIAMETER")); // NOI18N
 
-        jLabel9.setText("Airburst");
+        jLabel9.setText(bundle.getString("AIRBURST")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

@@ -5,6 +5,7 @@
 package com.mycompany.sampleproject;
 
 import java.awt.BorderLayout;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -17,8 +18,21 @@ public class AnimationView extends javax.swing.JFrame {
      */
     public AnimationView() {
         initComponents();
+        updateTexts();
+        pack();
        
     }
+    private void updateTexts() {
+    java.util.ResourceBundle bundle = ResourceBundle.getBundle(
+            "com.mycompany.sampleproject.Bundle",
+            SampleProject.APP_LOCALE
+        );
+
+    jButton1.setText(bundle.getString("ANIMATE"));
+    jLabel1.setText(bundle.getString("ID:"));
+
+    
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -49,14 +63,15 @@ public class AnimationView extends javax.swing.JFrame {
             .addGap(0, 770, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Animate");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com.mycompany.sampleproject.Bundle"); // NOI18N
+        jButton1.setText(bundle.getString("ANIMATE")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        jLabel1.setText("Id:");
+        jLabel1.setText(bundle.getString("ID:")); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

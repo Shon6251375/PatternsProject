@@ -73,7 +73,9 @@
     </Container>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Animate"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="ANIMATE" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -81,7 +83,9 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Id:"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="ID:" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">

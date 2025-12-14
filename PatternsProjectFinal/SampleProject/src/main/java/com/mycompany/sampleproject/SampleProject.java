@@ -4,15 +4,17 @@
 
 package com.mycompany.sampleproject;
 
+import java.util.Locale;
+
 /**
  *
  * @author shonc
  */
 public class SampleProject {
+    
+    public static Locale APP_LOCALE = Locale.ENGLISH;
 
     public static void main(String[] args) {
-//        AnimationView av=new AnimationView();
-//        av.setVisible(true);
         DatabaseController dbc=new DatabaseController();
         dbc.setVisible(true);
     }

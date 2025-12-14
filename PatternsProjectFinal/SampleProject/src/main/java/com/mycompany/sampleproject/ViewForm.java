@@ -10,6 +10,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ResourceBundle;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -23,9 +24,38 @@ public class ViewForm extends javax.swing.JFrame {
      */
     public ViewForm() {
         initComponents();
+        
         DatabaseController.mc.callviewTable(jTable1);
+        updateTexts();
+        pack();
+        
         
     }
+    private void updateTexts() {
+    java.util.ResourceBundle bundle = ResourceBundle.getBundle(
+            "com.mycompany.sampleproject.Bundle",
+            SampleProject.APP_LOCALE
+        );
+
+   
+    jButton1.setText(bundle.getString("REMOVE"));
+
+    
+    javax.swing.table.TableColumnModel columns = jTable1.getColumnModel();
+
+    columns.getColumn(0).setHeaderValue(bundle.getString("ID:"));
+    columns.getColumn(1).setHeaderValue(bundle.getString("METEOR NAME"));
+    columns.getColumn(2).setHeaderValue(bundle.getString("METEOR IMPACT DATE"));
+    columns.getColumn(3).setHeaderValue(bundle.getString("METEOR IMPACT TIME"));
+    columns.getColumn(4).setHeaderValue(bundle.getString("METEOR IMPACT LOCATION"));
+    columns.getColumn(5).setHeaderValue(bundle.getString("METEOR TYPE"));
+    columns.getColumn(6).setHeaderValue(bundle.getString("METEOR MASS"));
+    columns.getColumn(7).setHeaderValue(bundle.getString("METEOR DIAMETER"));
+    columns.getColumn(8).setHeaderValue(bundle.getString("AIRBURST"));
+
+   
+    jTable1.getTableHeader().repaint();
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,7 +92,8 @@ public class ViewForm extends javax.swing.JFrame {
         jTable1.setEnabled(false);
         jScrollPane1.setViewportView(jTable1);
 
-        jButton1.setText("Remove");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com.mycompany.sampleproject.Bundle"); // NOI18N
+        jButton1.setText(bundle.getString("REMOVE")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -74,21 +105,20 @@ public class ViewForm extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1253, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(1018, Short.MAX_VALUE)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1241, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 540, Short.MAX_VALUE)
+                .addContainerGap(30, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 516, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

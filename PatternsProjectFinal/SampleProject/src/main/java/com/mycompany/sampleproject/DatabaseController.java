@@ -7,6 +7,8 @@ import java.sql.Array.*;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 
 /**
@@ -14,6 +16,7 @@ import java.sql.SQLException;
  * @author shonc
  */
 public class DatabaseController extends javax.swing.JFrame {
+    public static Locale App_Locale;
     public static String DB_URL = "jdbc:sqlite:C:/Users/shonc/Downloads/MeteorDatabase.db";
     public static MeteorController mc=MeteorController.getInstance();
    
@@ -23,6 +26,27 @@ public class DatabaseController extends javax.swing.JFrame {
      */
     public DatabaseController() {
         initComponents();
+    }
+    
+    private void updateText()
+    {
+        ResourceBundle bundle =
+        ResourceBundle.getBundle(
+            "com.mycompany.sampleproject.Bundle",
+            SampleProject.APP_LOCALE
+        );
+
+    
+        jLabel1.setText(bundle.getString("METEOR DATABASE"));
+
+    // Update buttons
+        jButton1.setText(bundle.getString("VIEW TABLE"));
+        jButton2.setText(bundle.getString("ADD METEOR RECORD"));
+        jButton4.setText(bundle.getString("UPDATE METEOR UPDATE"));
+        jButton5.setText(bundle.getString("ANIMATE YOUR METEOR"));
+        jButton6.setText(bundle.getString("EXIT"));
+        
+    
     }
 
     /**
@@ -40,6 +64,7 @@ public class DatabaseController extends javax.swing.JFrame {
         jButton6 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton5 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setFocusable(false);
@@ -47,7 +72,8 @@ public class DatabaseController extends javax.swing.JFrame {
         setName("Database"); // NOI18N
         setResizable(false);
 
-        jButton1.setText("View Table");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com.mycompany.sampleproject.Bundle"); // NOI18N
+        jButton1.setText(bundle.getString("VIEW TABLE")); // NOI18N
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setName("ViewTableButton"); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -56,7 +82,7 @@ public class DatabaseController extends javax.swing.JFrame {
             }
         });
 
-        jButton2.setText("Add Meteor Record");
+        jButton2.setText(bundle.getString("ADD METEOR RECORD")); // NOI18N
         jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.setName("AddRecordButton"); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -65,7 +91,7 @@ public class DatabaseController extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Update Meteor Update");
+        jButton4.setText(bundle.getString("UPDATE METEOR UPDATE")); // NOI18N
         jButton4.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 255, 255), null, null));
         jButton4.setName("UpdateButton"); // NOI18N
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +100,7 @@ public class DatabaseController extends javax.swing.JFrame {
             }
         });
 
-        jButton6.setText("Exit");
+        jButton6.setText(bundle.getString("EXIT")); // NOI18N
         jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton6.setName("ExitButton"); // NOI18N
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -84,11 +110,11 @@ public class DatabaseController extends javax.swing.JFrame {
         });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        jLabel1.setText("Meteor Database");
+        jLabel1.setText(bundle.getString("METEOR DATABASE")); // NOI18N
         jLabel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jLabel1.setName("DatabaseLabel"); // NOI18N
 
-        jButton5.setText("Animate Your Meteor");
+        jButton5.setText(bundle.getString("ANIMATE YOUR METEOR")); // NOI18N
         jButton5.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(255, 255, 255), null, null));
         jButton5.setName("UpdateButton"); // NOI18N
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -97,36 +123,44 @@ public class DatabaseController extends javax.swing.JFrame {
             }
         });
 
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "English", "French" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(58, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(50, 50, 50))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addContainerGap())
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(66, 66, 66))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 14, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addContainerGap())))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -135,9 +169,9 @@ public class DatabaseController extends javax.swing.JFrame {
                 .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 16, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
                 .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27))
+                .addGap(34, 34, 34))
         );
 
         pack();
@@ -170,6 +204,21 @@ public class DatabaseController extends javax.swing.JFrame {
         AnimationView av=new AnimationView();
         av.setVisible(true);
     }//GEN-LAST:event_jButton5ActionPerformed
+
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        // TODO add your handling code here:
+        if(jComboBox1.getSelectedIndex() ==1)
+        {
+            SampleProject.APP_LOCALE=Locale.FRENCH;
+        }
+        else
+        {
+            SampleProject.APP_LOCALE=Locale.ENGLISH;
+        
+        }
+        updateText();
+        pack();
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -212,6 +261,7 @@ public class DatabaseController extends javax.swing.JFrame {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

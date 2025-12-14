@@ -129,12 +129,16 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="24" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Meteor Form"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR FORM" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Submit"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="SUBMIT" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
@@ -142,42 +146,58 @@
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Name"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR NAME" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel3">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Impact Date"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR IMPACT DATE" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel4">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Impact Time"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR IMPACT TIME" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel5">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Impact Location"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR IMPACT LOCATION" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel6">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Type"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR TYPE" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel7">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Mass"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR MASS" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel8">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Meteor Diameter"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="METEOR DIAMETER" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel9">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Airburst"/>
+        <Property name="text" type="java.lang.String" editor="org.netbeans.modules.i18n.form.FormI18nStringEditor">
+          <ResourceString bundle="com/mycompany/sampleproject/Bundle.properties" key="AIRBURST" replaceFormat="java.util.ResourceBundle.getBundle(&quot;{bundleNameDots}&quot;).getString(&quot;{key}&quot;)"/>
+        </Property>
       </Properties>
     </Component>
     <Component class="javax.swing.JTextField" name="jTextField1">

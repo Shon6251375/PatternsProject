@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
 /**
  *
@@ -20,7 +21,31 @@ public class UpdateForm extends javax.swing.JFrame {
      */
     public UpdateForm() {
         initComponents();
+        updateTexts();
+        pack();
     }
+    
+    private void updateTexts() {
+    java.util.ResourceBundle bundle = ResourceBundle.getBundle(
+            "com.mycompany.sampleproject.Bundle",
+            SampleProject.APP_LOCALE
+        );
+
+    jLabel1.setText(bundle.getString("ID:"));
+
+    jRadioButton1.setText(bundle.getString("METEOR NAME"));
+    jRadioButton2.setText(bundle.getString("IMPACT DATE"));
+    jRadioButton3.setText(bundle.getString("IMPACT TIME"));
+    jRadioButton4.setText(bundle.getString("IMPACT LOCATION"));
+    jRadioButton5.setText(bundle.getString("METEOR TYPE"));
+    jRadioButton6.setText(bundle.getString("METEOR MASS"));
+    jRadioButton7.setText(bundle.getString("METEOR DIAMETER"));
+    jRadioButton8.setText(bundle.getString("AIRBURST"));
+
+    jButton1.setText(bundle.getString("UPDATE"));
+
+    
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,31 +73,32 @@ public class UpdateForm extends javax.swing.JFrame {
         jLabel1.setText("ID");
 
         buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Meteor Name");
+        java.util.ResourceBundle bundle = java.util.ResourceBundle.getBundle("com.mycompany.sampleproject.Bundle"); // NOI18N
+        jRadioButton1.setText(bundle.getString("METEOR NAME")); // NOI18N
 
         buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Impact Date");
+        jRadioButton2.setText(bundle.getString("IMPACT DATE")); // NOI18N
 
         buttonGroup1.add(jRadioButton3);
-        jRadioButton3.setText("Impact Time");
+        jRadioButton3.setText(bundle.getString("IMPACT TIME")); // NOI18N
 
         buttonGroup1.add(jRadioButton4);
-        jRadioButton4.setText("Impact Location");
+        jRadioButton4.setText(bundle.getString("IMPACT LOCATION")); // NOI18N
 
         buttonGroup1.add(jRadioButton5);
-        jRadioButton5.setText("Meteor Type");
+        jRadioButton5.setText(bundle.getString("METEOR TYPE")); // NOI18N
 
         buttonGroup1.add(jRadioButton6);
-        jRadioButton6.setText("Meteor Mass");
+        jRadioButton6.setText(bundle.getString("METEOR MASS")); // NOI18N
 
         buttonGroup1.add(jRadioButton7);
-        jRadioButton7.setText("Meteor Diameter");
+        jRadioButton7.setText(bundle.getString("METEOR DIAMETER")); // NOI18N
         jRadioButton7.setToolTipText("");
 
         buttonGroup1.add(jRadioButton8);
-        jRadioButton8.setText("Airburst");
+        jRadioButton8.setText(bundle.getString("AIRBURST")); // NOI18N
 
-        jButton1.setText("Update");
+        jButton1.setText(bundle.getString("UPDATE")); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
